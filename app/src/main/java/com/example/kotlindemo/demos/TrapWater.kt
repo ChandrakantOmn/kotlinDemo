@@ -1,4 +1,4 @@
-package com.example.kotlindemo
+package com.example.kotlindemo.demos
 
 object TrapWater {
     private fun trap(height: IntArray): Int {

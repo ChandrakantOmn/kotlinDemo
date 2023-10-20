@@ -1,18 +1,16 @@
-package com.example.kotlindemo
+package com.example.kotlindemo.demos
 
 import java.util.Stack
 import kotlin.math.abs
 
 //    getAstrroids(arryOf(10, 2, -5))
 object Asteroid {
-
     fun solution(){
         asteroidCollisionStack(intArrayOf(10,2,6,-15,10,-5, 20, -9, -16 )).map {
             println(it)
         }
 
     }
-
 
     private fun asteroidCollision(asteroids: IntArray): IntArray {
         val stack = mutableListOf<Int>()
