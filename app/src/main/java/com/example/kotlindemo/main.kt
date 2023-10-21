@@ -5,6 +5,7 @@ import com.example.kotlindemo.demos.CandyProblem
 import com.example.kotlindemo.demos.Factorial
 import com.example.kotlindemo.demos.Fibonacci
 import com.example.kotlindemo.demos.Palindrome
+import com.example.kotlindemo.demos.RegularExpression
 import com.example.kotlindemo.demos.ReverseInteger
 import com.example.kotlindemo.demos.StringManipulation
 import com.example.kotlindemo.demos.TaskScheduler
@@ -12,21 +13,25 @@ import com.example.kotlindemo.demos.TrapWater
 import com.example.kotlindemo.demos.TwoSumArray
 
 fun main() {
-    val choice = StringManipulation.className
+    runCode(TrapWater.className)
+}
+fun runCode(choice: String) {
     when (choice) {
-        "Asteroid" -> Asteroid.solution()
-        "CandyProblem" -> CandyProblem.solution()
-        "Factorial" -> Factorial.solution()
-        "Fibonacci" -> Fibonacci.solution()
-        "Palindrome" -> Palindrome.solution()
-        "ReverseInteger" -> ReverseInteger.solution()
-        "StringManipulation" -> StringManipulation.solution()
-        "TaskScheduler" -> TaskScheduler.solution()
-        "TrapWater" -> TrapWater.solution()
-        "TwoSumArray" -> TwoSumArray.solution()
+        Asteroid.className -> Asteroid.solution()
+        CandyProblem.className -> CandyProblem.solution()
+        Factorial.className -> Factorial.solution()
+        Fibonacci.className -> Fibonacci.solution()
+        Palindrome.className -> Palindrome.solution()
+        ReverseInteger.className -> ReverseInteger.solution()
+        StringManipulation.className -> StringManipulation.solution()
+        TaskScheduler.className -> TaskScheduler.solution()
+        TrapWater.className -> TrapWater.solution()
+        TwoSumArray.className -> TwoSumArray.solution()
+        RegularExpression.className -> RegularExpression.solution()
         else -> println("Invalid choice")
     }
 }
+
 
 abstract class Solution<T> {
     abstract var  className : String
