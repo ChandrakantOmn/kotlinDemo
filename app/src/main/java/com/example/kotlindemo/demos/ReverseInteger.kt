@@ -1,14 +1,10 @@
 package com.example.kotlindemo.demos
 
+import com.example.kotlindemo.Solution
 
-abstract class Solution<T> {
-    abstract var result: T
-    abstract fun solution()
-    open fun printResult() {
-        println(result)
-    }}
 
-class ReverseInteger : Solution<Int>() {
+object ReverseInteger : Solution<Int>() {
+    override var className: String = "ReverseInteger"
     override var result: Int = 0
     override fun solution() {
         result = 123.reverse()

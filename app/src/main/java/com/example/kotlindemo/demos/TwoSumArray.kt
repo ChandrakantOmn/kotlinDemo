@@ -1,5 +1,7 @@
 package com.example.kotlindemo.demos
 
+import com.example.kotlindemo.Solution
+
 /* Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
 You can return the answer in any order.
@@ -28,8 +30,10 @@ Constraints:
 Only one valid answer exists.
 */
 
-object TwoSumArray {
-    fun solution(){
+object TwoSumArray : Solution<IntArray>() {
+    override var className: String = "TwoSumArray"
+    override var result: IntArray = intArrayOf()
+    override fun solution(){
         getExactOnePairs(intArrayOf(2,7,11,15, -2),target= 9).forEach {
             println(it)
         }

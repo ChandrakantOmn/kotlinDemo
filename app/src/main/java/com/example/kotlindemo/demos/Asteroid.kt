@@ -1,11 +1,15 @@
 package com.example.kotlindemo.demos
 
+import com.example.kotlindemo.Solution
 import java.util.Stack
 import kotlin.math.abs
 
 //    getAstrroids(arryOf(10, 2, -5))
-object Asteroid {
-    fun solution(){
+object Asteroid : Solution<IntArray>() {
+    override var className: String = "Asteroid"
+
+    override var result: IntArray = intArrayOf()
+    override fun solution(){
         asteroidCollisionStack(intArrayOf(10,2,6,-15,10,-5, 20, -9, -16 )).map {
             println(it)
         }

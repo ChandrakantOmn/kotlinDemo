@@ -1,21 +1,23 @@
 package com.example.kotlindemo.demos
 
-object CandyProblem {
+import com.example.kotlindemo.Solution
 
-    fun candyDistribution(k : Int, n: Int): IntArray {
-        val distribution = IntArray(k){0}
+object CandyProblem : Solution<IntArray>() {
+
+    fun candyDistribution(k: Int, n: Int): IntArray {
+        val distribution = IntArray(k) { 0 }
         var totalCandy = n
         var j = 0
-        while (totalCandy> 0){
-            for (i in 0..k){
+        while (totalCandy > 0) {
+            for (i in 0..k) {
                 j++
-                if (totalCandy<0){
+                if (totalCandy < 0) {
                     break
-                }else{
-                    if (totalCandy> j){
-                        distribution[i]+= j
-                    }else{
-                        distribution[i]+= totalCandy
+                } else {
+                    if (totalCandy > j) {
+                        distribution[i] += j
+                    } else {
+                        distribution[i] += totalCandy
                     }
                     totalCandy -= j
                 }
@@ -40,6 +42,14 @@ object CandyProblem {
 
         distribution.forEach { println(it) }
         return distribution
+    }
+
+    override var className: String = "CandyProblem"
+    override var result: IntArray = intArrayOf()
+
+    override fun solution() {
+        result = candyDistribution(4, 7)
+        printResult()
     }
 
 

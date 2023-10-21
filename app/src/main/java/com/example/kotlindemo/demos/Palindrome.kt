@@ -1,6 +1,9 @@
 package com.example.kotlindemo.demos
 
-class Palindrome : Solution<Boolean>() {
+import com.example.kotlindemo.Solution
+
+object Palindrome : Solution<Boolean>() {
+    override var className: String = "Palindrome"
     override var result: Boolean = false
     override fun solution() {
          //result  = "abbaa".isStringPalindrome()

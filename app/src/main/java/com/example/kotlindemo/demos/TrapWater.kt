@@ -1,6 +1,8 @@
 package com.example.kotlindemo.demos
 
-object TrapWater {
+import com.example.kotlindemo.Solution
+
+object TrapWater: Solution<Int>() {
     private fun trap(height: IntArray): Int {
         if (height.isEmpty()) return 0
         val n = height.size
@@ -33,9 +35,15 @@ object TrapWater {
 
     }
 
-    fun solution() {
+    override var className: String = "TrapWater"
+    override var result: Int  =0
+
+
+
+    override fun solution() {
         //Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
         //Output: 6
-        println(trap(intArrayOf(0,1,0,2,1,0,1,3,2,1,2,1)))
+        result = (trap(intArrayOf(0,1,0,2,1,0,1,3,2,1,2,1)))
+        printResult()
     }
 }

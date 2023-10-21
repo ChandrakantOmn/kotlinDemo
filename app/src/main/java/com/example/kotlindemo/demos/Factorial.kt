@@ -1,8 +1,14 @@
 package com.example.kotlindemo.demos
 
-object Factorial {
-    fun solution(){
-        print(factorial(2))
+import com.example.kotlindemo.Solution
+
+object Factorial : Solution<Int>() {
+    override var className: String = "Factorial"
+    override var result: Int = 0
+
+    override fun solution(){
+        result = (factorial(2))
+        printResult()
     }
 
     private fun factorial(i: Int): Int {

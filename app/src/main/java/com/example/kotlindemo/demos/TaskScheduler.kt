@@ -1,6 +1,8 @@
 package com.example.kotlindemo.demos
 
-object TaskScheduler {
+import com.example.kotlindemo.Solution
+
+object TaskScheduler : Solution<Int>(){
 
     private fun leastInterval(tasks: CharArray, n: Int): Int {
         val taskCounts = IntArray(26)
@@ -21,12 +23,16 @@ object TaskScheduler {
         return maxOf(totalSlots, tasks.size)
     }
 
-    fun solution() {
+    override var className: String = "TaskScheduler"
+    override var result: Int = 0
+
+    override fun solution() {
         //Input: tasks = ["A","A","A","B","B","B"], n = 2
         //Output: 8
         val arr = arrayOf("A", "A", "A", "B", "B", "B")
         val  arr2 = arrayOf("A","A","A","A","A","A","B","C","D","E","F","G")
         val chars: CharArray = arr2.joinToString("").toCharArray()
-          println(leastInterval(tasks = chars,2))
+          TaskScheduler.result = (leastInterval(tasks = chars,2))
+        printResult()
     }
 }

@@ -1,7 +1,13 @@
 package com.example.kotlindemo.demos
 
-object StringManipulation {
-        fun solution() {
+import com.example.kotlindemo.Solution
+
+object StringManipulation : Solution<String>(){
+    override var className: String = "StringManipulation"
+
+    override var result: String = ""
+
+    override fun solution() {
             findAllSubstring("FUN")
     }
 
