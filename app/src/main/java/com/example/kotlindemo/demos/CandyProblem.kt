@@ -4,7 +4,7 @@ import com.example.kotlindemo.Solution
 
 object CandyProblem : Solution<IntArray>() {
 
-    fun candyDistribution(k: Int, n: Int): IntArray {
+    private fun candyDistribution(k: Int, n: Int): IntArray {
         val distribution = IntArray(k) { 0 }
         var totalCandy = n
         var j = 0
