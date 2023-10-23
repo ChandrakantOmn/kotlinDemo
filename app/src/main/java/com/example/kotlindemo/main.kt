@@ -13,10 +13,11 @@ import com.example.kotlindemo.demos.TaskScheduler
 import com.example.kotlindemo.demos.TrapWater
 import com.example.kotlindemo.demos.TwoSumArray
 import com.example.kotlindemo.demos.WordSearch
+import com.example.kotlindemo.easy.ParseNumberFromString
 import com.example.kotlindemo.easy.RomanInteger
 
 fun main() {
-    runCode(RomanInteger.className)
+    runCode(ParseNumberFromString.className)
 }
 fun runCode(choice: String) {
     when (choice) {
@@ -34,6 +35,7 @@ fun runCode(choice: String) {
         MergeIntervals.className -> MergeIntervals.solution()
         WordSearch.className -> WordSearch.solution()
         RomanInteger.className -> RomanInteger.solution()
+        ParseNumberFromString.className -> ParseNumberFromString.solution()
         else -> println("Invalid choice")
     }
 }
