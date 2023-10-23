@@ -15,9 +15,10 @@ import com.example.kotlindemo.demos.TwoSumArray
 import com.example.kotlindemo.demos.WordSearch
 import com.example.kotlindemo.easy.ParseNumberFromString
 import com.example.kotlindemo.easy.RomanInteger
+import com.example.kotlindemo.medium.StringZigzagConversion
 
 fun main() {
-    runCode(ParseNumberFromString.className)
+    runCode(StringZigzagConversion.className)
 }
 fun runCode(choice: String) {
     when (choice) {
@@ -36,6 +37,7 @@ fun runCode(choice: String) {
         WordSearch.className -> WordSearch.solution()
         RomanInteger.className -> RomanInteger.solution()
         ParseNumberFromString.className -> ParseNumberFromString.solution()
+        StringZigzagConversion.className -> StringZigzagConversion.solution()
         else -> println("Invalid choice")
     }
 }
@@ -45,8 +47,12 @@ abstract class Solution<T> {
     abstract var  className : String
     abstract var result: T
     abstract fun solution()
-    open fun printResult() {
-        println("$className:Result: $result")
+    open fun printResult(msg : Any? = null) {
+        if (msg == null){
+            println("$className:Result: $result")
+        }else{
+            println("$className:Result: $msg")
+        }
     }
 }
 
