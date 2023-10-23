@@ -13,9 +13,10 @@ import com.example.kotlindemo.demos.TaskScheduler
 import com.example.kotlindemo.demos.TrapWater
 import com.example.kotlindemo.demos.TwoSumArray
 import com.example.kotlindemo.demos.WordSearch
+import com.example.kotlindemo.easy.RomanInteger
 
 fun main() {
-    runCode(WordSearch.className)
+    runCode(RomanInteger.className)
 }
 fun runCode(choice: String) {
     when (choice) {
@@ -32,6 +33,7 @@ fun runCode(choice: String) {
         RegularExpression.className -> RegularExpression.solution()
         MergeIntervals.className -> MergeIntervals.solution()
         WordSearch.className -> WordSearch.solution()
+        RomanInteger.className -> RomanInteger.solution()
         else -> println("Invalid choice")
     }
 }
@@ -45,3 +47,4 @@ abstract class Solution<T> {
         println("$className:Result: $result")
     }
 }
+
