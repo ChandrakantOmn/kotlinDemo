@@ -18,7 +18,7 @@ import com.example.kotlindemo.easy.RomanInteger
 import com.example.kotlindemo.medium.StringZigzagConversion
 
 fun main() {
-    runCode(StringZigzagConversion.className)
+    runCode(Palindrome.className)
 }
 fun runCode(choice: String) {
     when (choice) {

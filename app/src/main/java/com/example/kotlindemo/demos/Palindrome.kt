@@ -7,11 +7,24 @@ object Palindrome : Solution<Boolean>() {
     override var result: Boolean = false
     override fun solution() {
         //result  = "abbaa".isStringPalindrome()
-        result = 123454321.isPalindrome()
-        printResult()
+     //   result = 123454321.isPalindrome()
+        val longestPalindrome = longestPalindrome(string="abababd")
+        printResult(longestPalindrome)
 
     }
 
+    private fun longestPalindrome(string: String): String {
+        var longest = ""
+        for (i in string.indices) {
+            for (j in i + 1 until string.length + 1) {
+                val subString = string.substring(i, j)
+                if (subString.isStringPalindrome() && subString.length > longest.length) {
+                    longest = subString
+                }
+            }
+        }
+        return longest
+    }
     private fun String.isStringPalindrome(): Boolean {
         var left = 0
         var right = this.length - 1

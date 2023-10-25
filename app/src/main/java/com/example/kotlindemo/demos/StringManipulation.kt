@@ -1,5 +1,6 @@
 package com.example.kotlindemo.demos
 
+import android.annotation.SuppressLint
 import com.example.kotlindemo.Solution
 import java.util.LinkedList
 
@@ -8,6 +9,7 @@ object StringManipulation : Solution<Array<String>>(){
 
     override var result = emptyArray<String>()
 
+    @SuppressLint("SuspiciousIndentation")
     override fun solution() {
      //  result = findAllSubstrings("FUN")
      val ss =  longestSubstringWithoutRepeatingCharacters(input="ABCDEFGABCDEFGIJ")
