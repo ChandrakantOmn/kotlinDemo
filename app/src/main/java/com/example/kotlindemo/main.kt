@@ -15,10 +15,12 @@ import com.example.kotlindemo.demos.TwoSumArray
 import com.example.kotlindemo.demos.WordSearch
 import com.example.kotlindemo.easy.ParseNumberFromString
 import com.example.kotlindemo.easy.RomanInteger
+import com.example.kotlindemo.easy.SortArray
+import com.example.kotlindemo.hard.MergeArray
 import com.example.kotlindemo.medium.StringZigzagConversion
 
 fun main() {
-    runCode(Palindrome.className)
+    runCode(SortArray.className)
 }
 fun runCode(choice: String) {
     when (choice) {
@@ -38,6 +40,8 @@ fun runCode(choice: String) {
         RomanInteger.className -> RomanInteger.solution()
         ParseNumberFromString.className -> ParseNumberFromString.solution()
         StringZigzagConversion.className -> StringZigzagConversion.solution()
+        MergeArray.className -> MergeArray.solution()
+        SortArray.className -> SortArray.solution()
         else -> println("Invalid choice")
     }
 }
