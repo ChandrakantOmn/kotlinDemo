@@ -1,5 +1,6 @@
 package com.example.kotlindemo
 
+import com.example.kotlindemo.corotine.CoroutineDemo
 import com.example.kotlindemo.demos.Asteroid
 import com.example.kotlindemo.demos.CandyProblem
 import com.example.kotlindemo.demos.Factorial
@@ -14,13 +15,16 @@ import com.example.kotlindemo.demos.TrapWater
 import com.example.kotlindemo.demos.TwoSumArray
 import com.example.kotlindemo.demos.WordSearch
 import com.example.kotlindemo.easy.ParseNumberFromString
+import com.example.kotlindemo.easy.Pyramid
 import com.example.kotlindemo.easy.RomanInteger
 import com.example.kotlindemo.easy.SortArray
 import com.example.kotlindemo.hard.MergeArray
+import com.example.kotlindemo.medium.KthGrammar
+import com.example.kotlindemo.medium.PowOfN
 import com.example.kotlindemo.medium.StringZigzagConversion
 
 fun main() {
-    runCode(SortArray.className)
+    runCode(Pyramid.className)
 }
 fun runCode(choice: String) {
     when (choice) {
@@ -42,6 +46,10 @@ fun runCode(choice: String) {
         StringZigzagConversion.className -> StringZigzagConversion.solution()
         MergeArray.className -> MergeArray.solution()
         SortArray.className -> SortArray.solution()
+        CoroutineDemo.className -> CoroutineDemo.solution()
+        PowOfN.className -> PowOfN.solution()
+        KthGrammar.className -> KthGrammar.solution()
+        Pyramid.className -> Pyramid.solution()
         else -> println("Invalid choice")
     }
 }
